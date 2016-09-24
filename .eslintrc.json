@@ -1,0 +1,29 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "globals": {
+      "ENV": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "rules": {
+      "no-console": [
+          "error",
+          {
+            "allow": ["info", "warn", "error"]
+          }
+        ]
+    }
+}
