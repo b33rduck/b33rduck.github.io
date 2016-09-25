@@ -33,7 +33,9 @@ export default{
       main: true,
       browser: true,
     }),
-    commonjs(),
+    commonjs({
+      include: 'node_modules/**'
+    }),
     babel({
       exclude: 'node_modules/**',
     }),
@@ -43,8 +45,11 @@ export default{
       ]
     }),
     replace({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+    }),
+    replace({
       exclude: 'node_modules/**',
-      ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+      ENV: JSON.stringify(process.env.NODE_ENV),
     }),
     (process.env.NODE_ENV === 'production' && uglify()),
   ]
