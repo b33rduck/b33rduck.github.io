@@ -1,5 +1,4 @@
 html {
-  min-height: 100%;
   background: url(./public/images/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -7,32 +6,6 @@ html {
   background-size: cover;
 }
 
-footer {
-    width: 100%;
-    background-color: rgba(34, 34, 34, 0.6);
-    position: absolute;
-    bottom: 0;
-    font-size: 32px;
-    color: #ffffff;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-footer p {
-  font-size: 0.5em;
-  bottom: 0;
-  margin: 0 0 0.25em 0.75em;
-  position: absolute;
-}
-
-div.social {
-  text-align: center;
-  line-height: 3.5em;
-}
-
-div.social img {
-  height: 1.5em;
-  width: 1.5em;
+body {
+    min-height: 100%;
 }
