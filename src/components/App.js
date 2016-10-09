@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from './Footer/Footer';
+import Salutation from './Salutation/Salutation';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -9,6 +10,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="page-wrapper">
+        <Salutation />
         <Footer />
       </div>
     );
