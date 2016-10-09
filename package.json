@@ -4,6 +4,7 @@
   "description": "web",
   "main": "public/js/mainweb.js",
   "scripts": {
+    "dev": "NODE_ENV=development webpack-dev-server --hot --inline",
     "build": "NODE_ENV=production webpack --config webpack.config.prod.js --progress --profile --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,7 +29,8 @@
     "file-loader": "^0.9.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.14"
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "react": "^15.3.2",
