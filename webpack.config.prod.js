@@ -6,15 +6,16 @@ module.exports = {
     './src/main'
   ],
   output: {
-    path: 'public',
+    path: path.resolve(__dirname, 'public'),
     filename: 'main.js',
     publicPath: './public/'
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-        warnings: false
-      }
+        warnings: false,
+      },
+      comments: false,
     }),
     new webpack.DefinePlugin({
       'process.env': {

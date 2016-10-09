@@ -1,0 +1,32 @@
+.salutation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: #ffffff;
+}
+
+.salutation > h1.hasName {
+  display: none;
+}
+
+.salutation > h1 > input[type=text] {
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  background-color:rgba(0, 0, 0, 0);
+  width: 5.500em;
+  color: #ffffff;
+}
+
+.salutation > h1 > input[type=text]:focus {
+  padding-left: 0.250em;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}

@@ -8,11 +8,16 @@ module.exports = {
     './src/main'
   ],
   output: {
-    path: 'public',
+    path: path.resolve(__dirname, 'public'),
     filename: 'main.js',
-    publicPath: './public/'
+    publicPath: '/public/'
   },
   plugins: [
+    // new HtmlWebpackPlugin({
+    //   title: 'My App',
+    //   filename: 'assets/admin.html'
+    // }),
+    // new FaviconsWebpackPlugin('my-logo.png')
   ],
   module: {
     preLoaders: [
@@ -29,7 +34,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: "style!css"
+        loader: 'style!css'
       },
       {
         test: /\.(eot|woff|woff2|ttf)$/,
