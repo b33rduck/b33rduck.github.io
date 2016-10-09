@@ -14,3 +14,15 @@
   width: 5.500em;
   color: #ffffff;
 }
+
+.salutation > h1 > input[type=text]:focus {
+  padding-left: 0.250em;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
