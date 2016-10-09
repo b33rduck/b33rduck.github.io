@@ -13,8 +13,9 @@ module.exports = {
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-        warnings: false
-      }
+        warnings: false,
+      },
+      comments: false,
     }),
     new webpack.DefinePlugin({
       'process.env': {

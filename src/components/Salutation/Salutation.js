@@ -4,7 +4,7 @@ import './salutation.css';
 
 const ENTER_KEY_CODE = 13;
 
-class Footer extends React.Component {
+class Salutation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -69,10 +69,10 @@ class Footer extends React.Component {
   }
 }
 
-Footer.propTypes = {
+Salutation.propTypes = {
   userName: PropTypes.string,
   placeholder: PropTypes.string,
   // onSave: PropTypes.func.isRequired,
 };
 
-export default Footer;
+export default Salutation;
