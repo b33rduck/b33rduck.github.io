@@ -7,7 +7,7 @@
       "__$styleInject": true,
       "ENV": true
     },
-    "extends": "eslint:recommended",
+    "extends": "plugin:react/recommended",
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
@@ -18,7 +18,6 @@
     "plugins": [
         "react"
     ],
-    "extends": ["eslint:recommended", "plugin:react/recommended"],
     "rules": {
       "no-console": [
           "error",
