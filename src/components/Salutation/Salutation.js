@@ -1,8 +1,34 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import './salutation.css';
+import styled from 'styled-components';
 
 const ENTER_KEY_CODE = 13;
+
+const Container = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: #ffffff;
+`;
+const Input = styled.input`
+  display: ${props => props.hasName ? 'none' : 'block'};
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  background-color:rgba(0, 0, 0, 0);
+  width: 5.500em;
+  color: #ffffff;
+
+  &:focus {
+    padding-left: 0.250em;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    overflow: auto;
+    outline: none;
+    box-shadow: none;
+  }
+`;
 
 class Salutation extends React.Component {
   constructor(props) {
@@ -45,26 +71,27 @@ class Salutation extends React.Component {
     const year = new Date().getFullYear();
     const { hasName } = this.state;
 
-    const classes = classNames({ hasName: hasName });
-    let input;
-    if (hasName) {
-      input = (<h1>Hello {this.state.name}</h1>);
-    }
-
-    return (
-      <div className="salutation">
-        <h1 className={ classes } >What's your Name
-          <input
+    let caption = 'What\'s your name';
+    let input = (<Input
             type="text" 
             placeholder={ this.state.placeholder }
             autoFocus={ 1 }
             onBlur={ this.onKeyDown }
             onKeyDown={ this.onKeyDown }
-            onChange={ this.onChange }
-          />
+            onChange={this.onChange }
+          />);
+    if (hasName) {
+      input = undefined;
+      caption = `Hello ${this.state.name}`;
+    }
+
+    return (
+      <Container>
+        <h1>
+          {caption}
+          {input}
         </h1>
-        {input}
-      </div>
+      </Container>
     );
   }
 }

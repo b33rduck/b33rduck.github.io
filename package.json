@@ -40,6 +40,7 @@
     "mobx": "^2.6.0",
     "mobx-react": "^3.5.8",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "styled-components": "^1.0.5"
   }
 }
