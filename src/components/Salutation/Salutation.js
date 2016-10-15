@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import classNames from 'classnames';
 import styled from 'styled-components';
 
 const ENTER_KEY_CODE = 13;

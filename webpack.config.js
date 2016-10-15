@@ -23,27 +23,27 @@ module.exports = {
     preLoaders: [
       {
         test: /\.js/,
-        loader: 'eslint'
-      }
+        loader: 'eslint',
+      },
     ],
     loaders: [
       {
         test: /\.js$/,
         loaders: ['babel'],
-        include: path.join(__dirname, 'src')
+        include: path.join(__dirname, 'src'),
       },
       {
         test: /\.css$/,
-        loader: 'style!css'
+        loader: 'style!css',
       },
       {
         test: /\.(eot|woff|woff2|ttf)$/,
-        loader: 'url-loader?limit=30000&name=files/[name].[ext]'
+        loader: 'url-loader?limit=30000&name=files/[name].[ext]',
       },
       {
         test: /\.(png|jpg)$/,
-        loader: 'file-loader?name=images/[name].[ext]'
-      }
-    ]
-  }
+        loader: 'file-loader?name=images/[name].[ext]',
+      },
+    ],
+  },
 };
